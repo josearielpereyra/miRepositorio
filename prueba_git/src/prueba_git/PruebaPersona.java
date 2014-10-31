@@ -11,6 +11,7 @@ public class PruebaPersona {
 		System.out.println( persona1.obtenerNombre() );
 		
 		System.out.println("Para probar merge...");
+		System.out.println("Una linea mas..");
 
 	}
 
