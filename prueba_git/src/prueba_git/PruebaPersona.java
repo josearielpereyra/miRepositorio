@@ -9,6 +9,8 @@ public class PruebaPersona {
 										new GregorianCalendar(1975, 10, 25));
 		persona1.mostrarDatos();
 		System.out.println( persona1.obtenerNombre() );
+		
+		System.out.println("Para probar merge...");
 
 	}
 
