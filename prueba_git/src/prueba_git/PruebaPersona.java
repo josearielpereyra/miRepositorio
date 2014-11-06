@@ -15,6 +15,7 @@ public class PruebaPersona {
 		System.out.println("esto es una prueba...");
 		System.out.println("colaborador...");
 		System.out.println("Prueba de colaboracion");
+		System.out.println("uno mas...");
 	}
 
 }
