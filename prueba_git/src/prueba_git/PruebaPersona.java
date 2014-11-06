@@ -12,6 +12,7 @@ public class PruebaPersona {
 		
 		System.out.println("Para probar merge...");
 		System.out.println("Una linea mas..");
+		System.out.println("esto es una prueba...");
 
 	}
 
