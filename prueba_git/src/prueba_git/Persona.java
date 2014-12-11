@@ -1,6 +1,9 @@
 package prueba_git;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Calendar;
+import java.util.Formatter;
 
 public class Persona {
 	private String nombre;
@@ -79,6 +82,24 @@ public class Persona {
 		System.out.printf("Fecha de nacimiento: %d/%d/%d", fechaNacimiento.get(Calendar.DAY_OF_MONTH), 
 							fechaNacimiento.get(Calendar.MONTH), fechaNacimiento.get(Calendar.YEAR) );
 	}
+
+	public String obtenerFechaNacimientoComoString()
+	{
+		return String.format("%d/%d/%d", fechaNacimiento.get(Calendar.DAY_OF_MONTH), 
+				fechaNacimiento.get(Calendar.MONTH), fechaNacimiento.get(Calendar.YEAR) );
+	}
 	
-	
+	public void guardar() {
+		try {
+			Formatter formateador = new Formatter(new File("personas.txt"));
+			formateador.format("%-20s|%s|%s|%s", obtenerNombre(), obtenerDireccion(), obtenerTelefono(), 
+					obtenerFechaNacimientoComoString());
+			formateador.flush();
+			formateador.close();
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}	
 }
